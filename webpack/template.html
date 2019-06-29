@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <script type="text/javascript">
+    <%= htmlWebpackPlugin.options.version %>
+  </script>
+  <script type="text/javascript">
+    <%= htmlWebpackPlugin.options.project %>
+  </script>
+  <link rel="icon" href="./static/favicon.ico" type="image/x-icon" />
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

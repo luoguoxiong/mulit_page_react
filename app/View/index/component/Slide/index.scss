@@ -1,0 +1,43 @@
+#HomePageSlide {
+  position: fixed;
+  padding: 20px 0;
+  top: 62px;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  overflow-y: auto;
+  background: white;
+  border-right: 1px solid #eaecef;
+  & > .slideItem {
+    height: auto;
+    & > .slideItemName {
+      color: black;
+      transition: color 0.15s ease;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 0 30px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    & > .active {
+      color: #03a9f4;
+    }
+    & > .slideInner {
+      color: red;
+      margin-left: 60px;
+      font-size: 16px;
+      & > .slideInnerItem {
+        color: #2c3e50;
+        line-height: 36px;
+        cursor: pointer;
+      }
+      & > .active {
+        color: #03a9f4;
+      }
+      & > :hover {
+        color: #03a9f4;
+      }
+    }
+  }
+}
