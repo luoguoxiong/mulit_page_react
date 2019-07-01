@@ -56,7 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Peroluo/multi_page_react.git"
+    "url": "git+https://github.com/Peroluo/mulit_page_react.git"
   },
   "keywords": [
     "multi_page_react"
@@ -64,7 +64,7 @@
   "author": "luoguoxiong",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Peroluo/multi_page_react/issues"
+    "url": "https://github.com/Peroluo/mulit_page_react/issues"
   },
-  "homepage": "https://github.com/Peroluo/multi_page_react#readme"
+  "homepage": "https://github.com/Peroluo/mulit_page_react"
 }
