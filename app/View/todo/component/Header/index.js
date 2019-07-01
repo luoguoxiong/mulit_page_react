@@ -20,6 +20,15 @@ class Header extends React.Component {
               className="item"
               onClick={this.toUrl.bind(
                 this,
+                'https://github.com/Peroluo/mulit_page_react/issues'
+              )}
+            >
+              Issues
+            </div>
+            <div
+              className="item"
+              onClick={this.toUrl.bind(
+                this,
                 'https://github.com/Peroluo/mulit_page_react'
               )}
             >

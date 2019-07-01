@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env PROJECT=$npm_package_name   VERSION=$npm_package_version  webpack-dev-server  --mode development --devtool inline-source-map --hot",
     "build": "cross-env  PROJECT=$npm_package_name  BundleAnalyzer=BundleAnalyzer NODE_ENV=production VERSION=$npm_package_version webpack --mode production --watch --color --progress",
-    "build_publish": "cross-env PROJECT=$npm_package_name  NODE_ENV=production CDN_PATH=http://example.cdn VERSION=$npm_package_version  webpack --mode production --color --progress",
+    "build_publish": "cross-env CDN_PATH=http://example.cdn  PROJECT=$npm_package_name  NODE_ENV=production VERSION=$npm_package_version  webpack --mode production --color --progress & node cdn.js",
     "start": "node www.js"
   },
   "devDependencies": {
@@ -44,6 +44,7 @@
     "webpack": "^4.20.2",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.1.2",
+    "ali-oss": "^6.1.1",
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {

@@ -7,3 +7,22 @@
 > 3、使用*localStorage*与*dva*完美结合，实现了多页之间的优雅通信方式。
 >
 > 4、多页与（路由，组件）按需加载结合，构建高性能应用。
+
+##### 多单页开发环境（http://localhost:3100/）
+
+```sh
+npm run dev
+```
+
+##### 线上打包一
+
+```sh
+npm run build
+```
+
+##### 线上打包二  （需配置CDN）
+
+```SH
+npm run build_publish
+```
+

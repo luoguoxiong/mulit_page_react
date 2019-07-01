@@ -8,6 +8,7 @@ multi_page_react
     ├─ webpackHtml.js                    webpack.html
     ├─ withPath.js                       webpack文件夹解析器
 ├─ webpack.config.js                     webpack入口文件
+├─ cdn.js                                cdn上传脚本
 └─ app
     ├─ Common                            公共方法
     ├─ Component                         全局组件
