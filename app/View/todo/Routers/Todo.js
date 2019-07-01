@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from '@Common/Decorators'
-
+import { Header } from '../component'
 @connect(({ todo }) => ({
   ...todo
 }))
@@ -40,22 +40,25 @@ class Todo extends Component {
 
   renderHeader = () => {
     return (
-      <header>
-        <input ref={this.inputRef} placeholder="Enter an activity..." />
-        <button onClick={this.addTodo}>
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            viewBox="0 0 16 16"
-          >
-            <g>
-              <path d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"></path>
-            </g>
-          </svg>
-        </button>
-      </header>
+      <Fragment>
+        <Header />
+        <header>
+          <input ref={this.inputRef} placeholder="Enter an activity..." />
+          <button onClick={this.addTodo}>
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              viewBox="0 0 16 16"
+            >
+              <g>
+                <path d="M16,8c0,0.5-0.5,1-1,1H9v6c0,0.5-0.5,1-1,1s-1-0.5-1-1V9H1C0.5,9,0,8.5,0,8s0.5-1,1-1h6V1c0-0.5,0.5-1,1-1s1,0.5,1,1v6h6C15.5,7,16,7.5,16,8z"></path>
+              </g>
+            </svg>
+          </button>
+        </header>
+      </Fragment>
     )
   }
 
