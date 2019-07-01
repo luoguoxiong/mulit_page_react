@@ -13,7 +13,7 @@ class Header extends React.Component {
           <div className="titleName">Mulit-page-react</div>
           <nav>
             <div className="item active">指南</div>
-            <div className="item" onClick={this.toUrl.bind(this, '/todo')}>
+            <div className="item" onClick={this.toUrl.bind(this, './todo')}>
               Todo
             </div>
             <div

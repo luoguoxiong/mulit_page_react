@@ -12,7 +12,7 @@ class Header extends React.Component {
           <img src="./static/img/logo.png"></img>
           <div className="titleName">Mulit-page-react</div>
           <nav>
-            <div className="item " onClick={this.toUrl.bind(this, '/')}>
+            <div className="item " onClick={this.toUrl.bind(this, './')}>
               指南
             </div>
             <div className="item active">Todo</div>
