@@ -31,7 +31,7 @@ npm run build_publish
 ```
 multi_page_react
 ├─ webpack
-	├─ template.html                     html模板
+    ├─ template.html                     html模板
     ├─ webpackEntry.js                   webpack.entry
     ├─ webpackHtml.js                    webpack.html
     ├─ withPath.js                       webpack文件夹解析器
@@ -50,10 +50,10 @@ multi_page_react
     	├─ index.js
     ├─ View                              视图
     	├─ index
-    		├─ component                 首页模块组件
-        	├─ Routers                   首页模块路由
-        	├─ index.js                  首页模块入口（需引入app.js）
-        	├─ pageinfo.json             页面信息
+    	    ├─ component                 首页模块组件
+            ├─ Routers                   首页模块路由
+            ├─ index.js                  首页模块入口（需引入app.js）
+            ├─ pageinfo.json             页面信息
     	├─ todo
     ├─ static                            静态文件
     ├─ app.js                            连接Model与view
