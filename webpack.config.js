@@ -159,7 +159,7 @@ const config = {
         // },
 
         // markdown>vendor
-        vendor: {
+        editor: {
           name: 'for-editor',
           test: /[\\/]node_modules[\\/](for-editor)[\\/]/,
           chunks: 'all',

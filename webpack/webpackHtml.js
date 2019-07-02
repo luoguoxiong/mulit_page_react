@@ -27,7 +27,7 @@ function createHtml(page_path) {
         description: infoData.description
       },
       // 根据你配的chunks,生成js link入口
-      chunks: [`${item}`, 'styles', 'common', 'vendor', 'markdown'],
+      chunks: [`${item}`, 'styles', 'common', 'vendor'],
       template: './webpack/template.html',
       // 因为webpack目前不支持把按需加载打包到指定的目录下，暂时这么配置
       filename: item == 'index' ? 'index.html' : `./${item}/index.html`,
