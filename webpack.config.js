@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const SimpleProgressPlugin = require('webpack-simple-progress-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -21,9 +22,9 @@ const config = {
     ...entry
   },
   output: {
-    publicPath: process.env.CDN_PATH || '',
-    path: path.join(__dirname, 'build'),
-    filename: `./[name]/index.js?v=${process.env.VERSION || ''}`,
+    publicPath: process.env.CDN_PATH || '', // 通过package.json文件中CDN_PATH,决定是否有配置CDN的baseUrl
+    path: path.join(__dirname, 'build'), // 打包输出目标文件夹
+    filename: `./[name]/index.js?v=${process.env.VERSION || ''}`, // 输出文件
     chunkFilename: `./js/[name].js?v=${process.env.VERSION || ''}`
   },
   module: {
@@ -110,6 +111,7 @@ const config = {
     }
   },
   plugins: [
+    new SimpleProgressPlugin(),
     // 打包前先清空之前配置
     new CleanWebpackPlugin('build/*', {
       root: __dirname,
@@ -160,7 +162,7 @@ const config = {
 
         // markdown>vendor
         editor: {
-          name: 'for-editor',
+          name: 'otherVendor',
           test: /[\\/]node_modules[\\/](for-editor)[\\/]/,
           chunks: 'all',
           minSize: 0,

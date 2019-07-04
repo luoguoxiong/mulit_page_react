@@ -10,19 +10,17 @@ module.exports = function withPath(path) {
     // 过滤被选文件夹中有文件作为入口
     return readdirSync.filter(item => {
       let currentPath = path + '/' + item
-      let isHasDir = false
       // 判断是否是文件夹
       let isDirector = fs.statSync(currentPath).isDirectory()
       if (isDirector) {
         try {
-          // 判断打包文件价是否有文件
-          if (fs.readdirSync(currentPath).length) {
-            isHasDir = true
-          }
+          // 是否有入口文件index.js
+          return fs.readdirSync(currentPath).includes('index.js')
         } catch (e) {
-          isHasDir = false
+          return false
         }
-        return isHasDir
+      } else {
+        return false
       }
     })
   }
